@@ -4,10 +4,12 @@ import { ethers } from "ethers";
 export default function useWalletConnect() {
     const [balance, setBalance] = useState<string | undefined>();
     const [account, setAccount] = useState<string | undefined>();
-    const [detectMetaMask, setDetectMetaMask] = useState(true);
+    const [metaMaskError, setError] = useState<string | undefined>();
 
     useEffect(() => {
-        setDetectMetaMask(!!window.ethereum);
+        if (!window.ethereum) {
+            setError("Please install MetaMask");
+        }
     }, []);
 
     useEffect(() => {
@@ -43,7 +45,10 @@ export default function useWalletConnect() {
                     setAccount(accounts[0]);
                 }
             })
-            .catch((err) => console.error("Error connection wallet"));
+            .catch((err) => {
+                reportError(err);
+                setError("MetaMask connection failed, please try again");
+            });
     };
 
     const disconnect = () => {
@@ -51,5 +56,5 @@ export default function useWalletConnect() {
         setAccount(undefined);
     };
 
-    return { account, balance, connect, disconnect, detectMetaMask };
+    return { account, balance, connect, disconnect, metaMaskError };
 }
