@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
+import { reportError } from "~/telemetry";
 
 export default function useWalletConnect() {
     const [balance, setBalance] = useState<string | undefined>();
