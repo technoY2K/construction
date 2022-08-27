@@ -8,24 +8,24 @@
   },
   "dependencies": {
     "@netlify/functions": "^1.0.0",
-    "@openzeppelin/contracts": "^4.7.3",
     "@remix-run/netlify": "^1.6.8",
     "@remix-run/node": "^1.6.8",
     "@remix-run/react": "^1.6.8",
     "cross-env": "^7.0.3",
     "ethers": "^5.7.0",
-    "hardhat": "^2.10.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "@openzeppelin/contracts": "^4.7.3",
     "@remix-run/dev": "^1.6.8",
     "@remix-run/eslint-config": "^1.6.8",
     "@remix-run/serve": "^1.6.8",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "eslint": "^8.20.0",
+    "hardhat": "^2.10.2",
     "prettier": "^2.7.1",
     "styled-components": "^5.3.5",
     "typescript": "^4.7.4"
