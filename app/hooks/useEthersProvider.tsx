@@ -9,6 +9,10 @@ interface Props {
     children?: React.ReactNode;
 }
 
+export enum EPErrors {
+    MetaMaskNotInstalled = "1",
+}
+
 const initial: Context = {
     provider: undefined,
 };
@@ -21,7 +25,7 @@ export const EthersProvider = (props: Props) => {
 
     useEffect(() => {
         if (!window.ethereum) {
-            throw new Error("Please install MetaMask");
+            throw new Error(EPErrors.MetaMaskNotInstalled);
         }
 
         const provider = new ethers.providers.Web3Provider(window.ethereum);

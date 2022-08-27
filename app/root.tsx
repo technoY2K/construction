@@ -6,6 +6,8 @@ import {
     Scripts,
     ScrollRestoration,
 } from "@remix-run/react";
+import { EPErrors } from "./hooks/useEthersProvider";
+
 import App from "./App";
 
 export const meta: MetaFunction = () => ({
@@ -26,6 +28,31 @@ export default function Root() {
                 <ScrollRestoration />
                 <Scripts />
                 <LiveReload />
+            </body>
+        </html>
+    );
+}
+
+interface Props {
+    error: Error;
+}
+
+export function ErrorBoundary(props: Props) {
+    const message =
+        props.error.message === EPErrors.MetaMaskNotInstalled
+            ? "Please Install MetaMask"
+            : props.error;
+
+    return (
+        <html>
+            <head>
+                <title>Oh no!</title>
+                <Meta />
+                <Links />
+            </head>
+            <body>
+                <p>{`${message}`}</p>
+                <Scripts />
             </body>
         </html>
     );
