@@ -3,10 +3,10 @@ import {
     Links,
     LiveReload,
     Meta,
-    Outlet,
     Scripts,
     ScrollRestoration,
 } from "@remix-run/react";
+import App from "./App";
 
 export const meta: MetaFunction = () => ({
     charset: "utf-8",
@@ -14,7 +14,7 @@ export const meta: MetaFunction = () => ({
     viewport: "width=device-width,initial-scale=1",
 });
 
-export default function App() {
+export default function Root() {
     return (
         <html lang="en">
             <head>
@@ -22,7 +22,7 @@ export default function App() {
                 <Links />
             </head>
             <body>
-                <Outlet />
+                <App />
                 <ScrollRestoration />
                 <Scripts />
                 <LiveReload />
