@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import { ethers } from "ethers";
+import { useEffect, useState } from "react";
 import { reportError } from "~/telemetry";
 import { useGetEthersProviderContext } from "./useEthersProvider";
 

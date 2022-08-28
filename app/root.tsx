@@ -6,9 +6,8 @@ import {
     Scripts,
     ScrollRestoration,
 } from "@remix-run/react";
-import { EPErrors } from "./hooks/useEthersProvider";
-
 import App from "./App";
+import { EPErrors } from "./hooks/useEthersProvider";
 
 export const meta: MetaFunction = () => ({
     charset: "utf-8",

@@ -1,5 +1,5 @@
-import useWalletConnector from "~/hooks/useWalletConnector";
 import TokenReader from "~/components/TokenReader";
+import useWalletConnector from "~/hooks/useWalletConnector";
 
 export default function Index() {
     const { account, balance, connect, disconnect } = useWalletConnector();

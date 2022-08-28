@@ -1,5 +1,5 @@
-import { createContext, useContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
+import { createContext, useContext, useEffect, useState } from "react";
 
 interface Context {
     provider?: ethers.providers.Web3Provider;

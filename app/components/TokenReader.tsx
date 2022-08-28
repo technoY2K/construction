@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
 import abi from "abi/contracts/FakeToken.sol/FakeToken.json";
 import { ethers } from "ethers";
+import { useEffect, useState } from "react";
 
 interface Props {
     contractAddress: string;
