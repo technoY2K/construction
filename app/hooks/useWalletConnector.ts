@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import { reportError } from "~/telemetry";
 import { useGetEthersProviderContext } from "./useEthersProvider";
 
-export default function useWalletConnect() {
+export default function useWalletConnector() {
     const [balance, setBalance] = useState<string | undefined>();
     const [account, setAccount] = useState<string>();
     const { provider } = useGetEthersProviderContext();
