@@ -1,3 +1,6 @@
+/* 
+    Provides a single Web3Provider to the whole App
+*/
 import { ethers } from "ethers";
 import { createContext, useContext, useEffect, useState } from "react";
 
@@ -25,6 +28,7 @@ export const EthersProvider = (props: Props) => {
 
     useEffect(() => {
         if (!window.ethereum) {
+            // error gets caught in root.tsx
             throw new Error(EPErrors.MetaMaskNotInstalled);
         }
 

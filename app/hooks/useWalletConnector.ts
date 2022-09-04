@@ -1,10 +1,13 @@
+/*
+    Connects dApp to browser extentions. Currently only supports MetaMask.
+ */
 import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 import { reportError } from "~/telemetry";
 import { useGetEthersProviderContext } from "./useEthersProvider";
 
 export default function useWalletConnector() {
-    const [balance, setBalance] = useState<string | undefined>();
+    const [balance, setBalance] = useState<string>();
     const [account, setAccount] = useState<string>();
     const { provider } = useGetEthersProviderContext();
 
