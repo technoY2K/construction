@@ -1,6 +1,7 @@
 import abi from "abi/contracts/FakeToken.sol/FakeToken.json";
 import { ethers } from "ethers";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useGetEthersProviderContext } from "~/hooks/useEthersProvider";
 
 interface Props {
     contractAddress: string;
@@ -9,22 +10,30 @@ interface Props {
 
 export default function TokenReader(props: Props) {
     const [totalSupply, setTotalSupply] = useState<string>("0");
+    const { provider } = useGetEthersProviderContext();
+    const erc20 = useMemo(
+        () => new ethers.Contract(props.contractAddress, abi, provider),
+        [props.contractAddress, provider]
+    );
 
     useEffect(() => {
-        if (!window.ethereum) {
-            return;
-        }
-
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const erc20 = new ethers.Contract(props.contractAddress, abi, provider);
-
         erc20
             .totalSupply()
             .then((total: string) => {
                 setTotalSupply(ethers.utils.formatEther(total));
             })
             .catch("error", console.error);
-    }, [props.contractAddress]);
+    }, [erc20, props.contractAddress, provider]);
+
+    useEffect(() => {
+        if (props.currentAccount) {
+            erc20
+                .balanceOf(props.currentAccount)
+                .then((balance: string) =>
+                    console.log(Number(ethers.utils.formatEther(balance)))
+                );
+        }
+    }, [erc20, props.currentAccount]);
 
     return (
         <div>
