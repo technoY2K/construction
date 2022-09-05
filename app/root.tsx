@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
     Links,
     LiveReload,
@@ -14,6 +14,21 @@ export const meta: MetaFunction = () => ({
     title: "Cools",
     viewport: "width=device-width,initial-scale=1",
 });
+
+export const links: LinksFunction = () => [
+    {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+    },
+    {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+    },
+    {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap",
+    },
+];
 
 const initStyledComponents = () =>
     typeof document === "undefined" ? "__STYLES__" : null;
