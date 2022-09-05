@@ -6,9 +6,11 @@ import { useEffect, useState } from "react";
 import { reportError } from "~/telemetry";
 import { useGetEthersProviderContext } from "./useEthersProvider";
 
+export type ConnectedAccount = string | undefined;
+
 export default function useWalletConnector() {
     const [balance, setBalance] = useState<string>();
-    const [account, setAccount] = useState<string>();
+    const [account, setAccount] = useState<ConnectedAccount>();
     const { provider } = useGetEthersProviderContext();
 
     useEffect(() => {

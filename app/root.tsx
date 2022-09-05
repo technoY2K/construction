@@ -15,12 +15,16 @@ export const meta: MetaFunction = () => ({
     viewport: "width=device-width,initial-scale=1",
 });
 
+const initStyledComponents = () =>
+    typeof document === "undefined" ? "__STYLES__" : null;
+
 export default function Root() {
     return (
         <html lang="en">
             <head>
                 <Meta />
                 <Links />
+                {initStyledComponents()}
             </head>
             <body>
                 <App />
@@ -48,6 +52,7 @@ export function ErrorBoundary(props: Props) {
                 <title>Oh no!</title>
                 <Meta />
                 <Links />
+                {initStyledComponents()}
             </head>
             <body>
                 <p>{`${message}`}</p>

@@ -1,5 +1,8 @@
+import styled from "styled-components";
 import TokenReader from "~/components/TokenReader";
 import useWalletConnector from "~/hooks/useWalletConnector";
+
+const Container = styled.div``;
 
 export default function Index() {
     const { account, balance, connect, disconnect } = useWalletConnector();
@@ -7,7 +10,7 @@ export default function Index() {
     const clickHandler = account ? disconnect : connect;
 
     return (
-        <div>
+        <Container>
             <p>{`Account: ${account ? account : ""}`}</p>
             <p>{`Balance: ${balance ? balance : ""}`}</p>
             <button onClick={clickHandler} style={{ cursor: "pointer" }}>
@@ -19,6 +22,6 @@ export default function Index() {
                     currentAccount={account}
                 />
             </div>
-        </div>
+        </Container>
     );
 }

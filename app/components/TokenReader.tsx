@@ -2,10 +2,11 @@ import abi from "abi/contracts/FakeToken.sol/FakeToken.json";
 import { ethers } from "ethers";
 import { useEffect, useMemo, useState } from "react";
 import { useGetEthersProviderContext } from "~/hooks/useEthersProvider";
+import { type ConnectedAccount } from "~/hooks/useWalletConnector";
 
 interface Props {
     contractAddress: string;
-    currentAccount: string | undefined;
+    currentAccount: ConnectedAccount;
 }
 
 export default function TokenReader(props: Props) {
