@@ -66,6 +66,13 @@ export default function Index() {
                     process of discovering how it can really improve our digital
                     lives.
                 </p>
+                <p>
+                    Something I've been thinking about a lot lately is how can
+                    blockchain technology help us combat disinformation and
+                    misinformation? The explosion of information in our modern
+                    age has made it harder to understand reality and to discern
+                    fact from fiction.
+                </p>
             </Bio>
         </Container>
     );
