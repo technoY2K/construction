@@ -1,10 +1,14 @@
 import { Outlet } from "@remix-run/react";
 import styled, { createGlobalStyle } from "styled-components";
+import counterSrc from "../public/assets/counter.gif";
+import ieLogoSrc from "../public/assets/ie-logo.gif";
+import notePadSrc from "../public/assets/notepad.gif";
+import nsSrc from "../public/assets/ns-logo.gif";
 import { EthersProvider } from "./hooks/useEthersProvider";
 
 const GlobalStyle = createGlobalStyle`
     body {
-        font-family: 'IBM Plex Mono', monospace;
+        font-family: serif;
         background-image: url("/assets/grey-tile.png");
     }
 `;
@@ -16,7 +20,20 @@ const MainWrapper = styled.div`
 `;
 
 const MainContainer = styled.div`
-    min-width: 75vw;
+    width: 80%;
+    padding-top: 32px;
+
+    @media screen and (min-width: 992px) {
+        width: 60%;
+    }
+`;
+
+const Footer = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 64px;
 `;
 
 export default function App() {
@@ -27,6 +44,12 @@ export default function App() {
                 <MainWrapper>
                     <MainContainer>
                         <Outlet />
+                        <Footer>
+                            <img src={counterSrc} alt="counter-gif" />
+                            <img src={nsSrc} alt="ns-logo-gif" />
+                            <img src={ieLogoSrc} alt="ie-logo-gif" />
+                            <img src={notePadSrc} alt="notepad-gif" />
+                        </Footer>
                     </MainContainer>
                 </MainWrapper>
             </EthersProvider>

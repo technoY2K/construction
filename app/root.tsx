@@ -11,7 +11,7 @@ import { EPErrors } from "./hooks/useEthersProvider";
 
 export const meta: MetaFunction = () => ({
     charset: "utf-8",
-    title: "Cools",
+    title: "Welcome",
     viewport: "width=device-width,initial-scale=1",
 });
 
