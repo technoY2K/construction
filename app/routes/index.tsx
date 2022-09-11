@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import TokenReader from "~/components/TokenReader";
 import useWalletConnector from "~/hooks/useWalletConnector";
+import ethSrc from "../../public/assets/eth.gif";
 import githubSrc from "../../public/assets/github.gif";
 import helloSrc from "../../public/assets/hello.gif";
 import linkedinSrc from "../../public/assets/linkedin.gif";
@@ -113,13 +114,43 @@ export default function Index() {
                 </p>
                 <p>
                     Outside of work I enjoy reading sci-fi books, exercising in
-                    the mornings, ugly websites from the 1990s (obviously) and
-                    more coding.
+                    the mornings, techno music from the early 2000s, ugly
+                    websites from the 1990s (obviously) and more coding.
                 </p>
             </Bio>
             <hr />
             <h2>Where you can reach me</h2>
             <SocialLists>
+                <li>
+                    <a
+                        href="https://github.com/technoY2K"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <img src={githubSrc} alt="github" />
+                        Github
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.linkedin.com/in/kevia-cloud/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <img src={linkedinSrc} alt="linkedin" />
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://stackoverflow.com/users/3276646/technoY2K"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <img src={stackSrc} alt="stackoverflow" />
+                        StackOverflow
+                    </a>
+                </li>
                 <li>
                     <a
                         href="https://twitter.com/technoY2K"
@@ -131,22 +162,8 @@ export default function Index() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://github.com/technoY2K">
-                        <img src={githubSrc} alt="github" />
-                        Github
-                    </a>
-                </li>
-                <li>
-                    <a href="https://stackoverflow.com/users/3276646/technoY2K">
-                        <img src={stackSrc} alt="stackoverflow" />
-                        StackOverflow
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/kevia-cloud/">
-                        <img src={linkedinSrc} alt="linkedin" />
-                        LinkedIn
-                    </a>
+                    <img src={ethSrc} alt="eth address" />
+                    kevia.eth
                 </li>
             </SocialLists>
         </Container>
