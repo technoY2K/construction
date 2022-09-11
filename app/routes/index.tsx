@@ -63,7 +63,8 @@ export default function Index() {
                     technology and I believe we are only in the early stages of
                     unlocking its true potential. Cryptocurrencies and NFTs are
                     the obvious and easy implementations, we are still in the
-                    process of discovering how it can improve our digital lives.
+                    process of discovering how it can really improve our digital
+                    lives.
                 </p>
             </Bio>
         </Container>

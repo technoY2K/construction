@@ -4,7 +4,6 @@ import counterSrc from "../public/assets/counter.gif";
 import ieLogoSrc from "../public/assets/ie-logo.gif";
 import notePadSrc from "../public/assets/notepad.gif";
 import nsSrc from "../public/assets/ns-logo.gif";
-import { EthersProvider } from "./hooks/useEthersProvider";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -39,20 +38,18 @@ const Footer = styled.div`
 export default function App() {
     return (
         <div id="app">
-            <EthersProvider>
-                <GlobalStyle />
-                <MainWrapper>
-                    <MainContainer>
-                        <Outlet />
-                        <Footer>
-                            <img src={counterSrc} alt="counter-gif" />
-                            <img src={nsSrc} alt="ns-logo-gif" />
-                            <img src={ieLogoSrc} alt="ie-logo-gif" />
-                            <img src={notePadSrc} alt="notepad-gif" />
-                        </Footer>
-                    </MainContainer>
-                </MainWrapper>
-            </EthersProvider>
+            <GlobalStyle />
+            <MainWrapper>
+                <MainContainer>
+                    <Outlet />
+                    <Footer>
+                        <img src={counterSrc} alt="counter-gif" />
+                        <img src={nsSrc} alt="ns-logo-gif" />
+                        <img src={ieLogoSrc} alt="ie-logo-gif" />
+                        <img src={notePadSrc} alt="notepad-gif" />
+                    </Footer>
+                </MainContainer>
+            </MainWrapper>
         </div>
     );
 }
