@@ -2,7 +2,6 @@ import { Outlet } from "@remix-run/react";
 import styled, { createGlobalStyle } from "styled-components";
 import counterSrc from "../public/assets/counter.gif";
 import ieLogoSrc from "../public/assets/ie-logo.gif";
-import notePadSrc from "../public/assets/notepad.gif";
 import nsSrc from "../public/assets/ns-logo.gif";
 
 const GlobalStyle = createGlobalStyle`
@@ -46,7 +45,6 @@ export default function App() {
                         <img src={counterSrc} alt="counter-gif" />
                         <img src={nsSrc} alt="ns-logo-gif" />
                         <img src={ieLogoSrc} alt="ie-logo-gif" />
-                        <img src={notePadSrc} alt="notepad-gif" />
                     </Footer>
                 </MainContainer>
             </MainWrapper>
