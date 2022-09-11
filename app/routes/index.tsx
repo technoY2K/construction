@@ -2,7 +2,9 @@ import styled from "styled-components";
 import TokenReader from "~/components/TokenReader";
 import useWalletConnector from "~/hooks/useWalletConnector";
 
-const Container = styled.div``;
+const Container = styled.div`
+    width: 100%;
+`;
 
 export default function Index() {
     const { account, balance, connect, disconnect } = useWalletConnector();
