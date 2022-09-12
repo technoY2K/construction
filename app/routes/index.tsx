@@ -82,8 +82,8 @@ export default function Index() {
             <Bio>
                 <p>
                     I am currently working as a software engineer at{" "}
-                    <Anchor href="https:nft.gamestop.com">GameStop</Anchor>. Our
-                    team is responsible for the NFT marketplace which has a
+                    <Anchor href="https://nft.gamestop.com/">GameStop</Anchor>.
+                    Our team is responsible for the NFT marketplace which has a
                     focus on Web3 gaming. Blockchain is a truly amazing
                     technology and I believe we are only in the early stages of
                     unlocking its true potential. Cryptocurrencies and NFTs are
