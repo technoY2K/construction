@@ -119,7 +119,7 @@ export default function Index() {
                 </p>
             </Bio>
             <hr />
-            <h2>Where you can reach me</h2>
+            <h2>Find me on the Interwebs</h2>
             <SocialLists>
                 <li>
                     <a
