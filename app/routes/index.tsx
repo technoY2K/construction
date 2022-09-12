@@ -107,10 +107,10 @@ export default function Index() {
                     accessible at your finger tips. However, because of filter
                     bubbles, confirmation bias, cognitive dissonance and
                     attention economics, we as a society are more divided than
-                    ever! Could blockchain technology fix our media landscape by
-                    realigning the incentives? Could we be able to trust what we
-                    read online if the blockchain provided some measure of
-                    provenance?
+                    ever! Can blockchain technology fix our media landscape by
+                    realigning the incentives? Would it be possible to fully
+                    trust what we consume on the internet if the blockchain
+                    provided some measure of provenance?
                 </p>
                 <p>
                     Outside of work I enjoy reading sci-fi books, exercising in
