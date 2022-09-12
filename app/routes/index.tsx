@@ -105,11 +105,11 @@ export default function Index() {
                     We live in what could only be described as an information
                     Utopia. Anything and everything you want to possibly know is
                     accessible at your finger tips. However, because of filter
-                    bubbles, cognitive bias, cognitive dissonance and attention
-                    economics, we as a society are more divided than ever! Could
-                    blockchain technology fix our media landscape by realigning
-                    the incentives? Could we be able to trust what we read
-                    online if the blockchain provided some measure of
+                    bubbles, confirmation bias, cognitive dissonance and
+                    attention economics, we as a society are more divided than
+                    ever! Could blockchain technology fix our media landscape by
+                    realigning the incentives? Could we be able to trust what we
+                    read online if the blockchain provided some measure of
                     provenance?
                 </p>
                 <p>
